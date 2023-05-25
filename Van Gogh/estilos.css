@@ -1,0 +1,204 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Lobster Two', cursive;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+:root{
+    --back-color: #5499C7   ;
+    --titulo-color: #F4D03F   ;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.menu{
+    display: flex;
+}
+.menu a{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin: 0 35px;
+    transition: all ease 1s;
+    color: #fff;
+    text-decoration: none;
+}
+.menu a:hover{
+    color: black;
+}
+.logo{
+    font-family: 'Lobster Two', cursive;
+    display:flex;
+    font-size: 50px;
+}
+.pincel{
+    font-size: 30px;
+}
+header{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 9%;
+    background-color: #1F618D;
+    color: #ffff;
+}
+
+.content{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1rem;
+    background-color:var(--back-color);
+    padding: 0 12%;   
+}
+.pagina1 h1{
+    font-family:  'Lobster Two', cursive ;
+    color: var(--titulo-color) ;
+    font-size: 4.5rem;
+    padding-top: 100px;  
+   
+}
+.pagina1 p{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    line-height: 26px;
+    max-width: 500px;
+    margin-bottom: 4rem;
+    padding-top: 10px;
+    padding-left: 30px;
+}
+.imgVanGogh{
+    padding-left: 200px;
+    padding-top: 80px;
+}
+.imgVanGogh img{
+    width: 300px;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgb(108, 134, 216);
+    transition: all ease 1s ;
+
+}
+
+.imgVanGogh:hover{
+    transform: translate(-5px) scale(1.1);
+}
+
+.biografia{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1rem;
+   background-image: url(./img/starry-sky-1948523_1920.jpg);
+   background-size: cover;
+}
+.pagina2{
+    padding: 0 12%; 
+}
+.pagina2 h1{
+    font-family:  'Lobster Two', cursive ;
+    color: #fff;
+    display: inline-block;
+    margin-top: 20px ;
+    padding: 8px 20px;
+    background-color:var(--back-color);
+    font-size: 4rem;
+    
+    align-items: center ;  
+
+}
+.pagina2 p{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    line-height: 26px;
+    max-width: 500px;
+    color: #fff;
+    display: inline-block;
+    margin-top: 20px ;
+    padding: 8px 20px;
+    background-color:var(--back-color);
+}
+.obras{
+    position: relative;
+    width: 100%;
+    height: 110vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    background-color: var(--titulo-color) ;
+    padding: 0 12%; 
+
+}
+.pagina3 h1{
+    font-family:'Lobster Two', cursive ;
+    color: var(--back-color) ;
+    font-size: 4.5rem;
+    padding-top: 100px; 
+}
+.pagina3 h3{
+    font-family: 'Raleway', sans-serif;
+    color: var(--back-color) ;
+    font-size: 1.5rem;
+    padding-top: 10px; 
+    padding-left: 10px;
+    padding-bottom: 15px;
+}
+.pagina3 p{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    line-height: 26px;
+    max-width: 500px;
+    margin-bottom: 1.5rem;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.box{
+    background-color: var(--second-color);
+    padding: 5px 5px;
+    padding-bottom: 2px;
+    box-shadow: 5px 5px 25px rgb(108, 134, 216);
+    font-family: 'Raleway', sans-serif;
+    background-color:#fff;
+}
+.box img{
+    max-width: 100% ;
+    height: 200px;
+    padding-bottom: 2px;
+    transition: all ease 1s ;
+    
+}
+.box:hover{
+    transform: translate(-5px) scale(1.1);
+}
+.pagina3-img{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px,auto));
+    gap: 30px;
+    transition: all ease 1s ;
+    
+
+}
+.redes{
+    display: flex;
+}
+.redes a{
+    font-size: 20px;
+    margin: 0 25px;
+}
+.redes-sociais{
+    color: #fff;
+}
