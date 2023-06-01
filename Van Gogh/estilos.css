@@ -7,13 +7,17 @@
     list-style: none;
     box-sizing: border-box;
 }
+
+body{
+    overflow-x: hidden;
+}
+
 :root{
     --back-color: #5499C7   ;
     --titulo-color: #F4D03F   ;
-}
-
-html{
-    scroll-behavior: smooth;
+    --text-color: #fff;
+    --bg-color: #08162a;
+    --second-color: #6b7e9b;
 }
 .menu{
     display: flex;
@@ -35,8 +39,18 @@ html{
     display:flex;
     font-size: 50px;
 }
-.pincel{
-    font-size: 30px;
+.redes{
+    display: flex;
+}
+.redes a{
+    font-size: 20px;
+    margin: 0 25px;
+}
+.redes-sociais{
+    color: #fff;
+}
+.redes-sociais:hover{
+    color: black;
 }
 header{
     position: fixed;
@@ -51,7 +65,6 @@ header{
     background-color: #1F618D;
     color: #ffff;
 }
-
 .content{
     position: relative;
     width: 100%;
@@ -79,22 +92,41 @@ header{
     padding-top: 10px;
     padding-left: 30px;
 }
-.imgVanGogh{
-    padding-left: 200px;
-    padding-top: 80px;
+.imgVanGogh, .card{
+    padding-bottom: 300px;
+    padding-left: 100px;
 }
-.imgVanGogh img{
+.card{
+    perspective: 1000px;
+}
+
+.flip{
+    position: relative;
+    z-index: 1;
+}
+
+.card .flip{
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+.card:hover .flip{
+    transform: rotateY(180deg);
+}
+.imgVanGogh, .back-card{
+    position: absolute;
+    backface-visibility: hidden;
+}
+.back-card{
+    transform: rotateY(180deg);
+}
+.imgVanGogh img, .back-card img{
+    border-radius: 12px;
     width: 300px;
     border-radius: 1rem;
     box-shadow: 5px 5px 20px rgb(108, 134, 216);
-    transition: all ease 1s ;
+    
 
 }
-
-.imgVanGogh:hover{
-    transform: translate(-5px) scale(1.1);
-}
-
 .biografia{
     position: relative;
     width: 100%;
@@ -189,16 +221,14 @@ header{
     grid-template-columns: repeat(auto-fit, minmax(100px,auto));
     gap: 30px;
     transition: all ease 1s ;
-    
-
 }
-.redes{
+.circulo{
+    width: 800px;
+    height: 800px;
+    background-color: var(--titulo-color);
     display: flex;
-}
-.redes a{
-    font-size: 20px;
-    margin: 0 25px;
-}
-.redes-sociais{
-    color: #fff;
+    position: fixed;
+    z-index: 0;
+    border-radius: 50%;
+    margin: 30%;
 }
